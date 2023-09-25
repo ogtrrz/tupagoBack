@@ -1,0 +1,88 @@
+entity AccountUser {
+    id Long required
+    user String maxlength(100) required
+    userAccount UUID required
+    inscription Instant required
+    userTelephone String minlength(10) maxlength(20) required
+    userName String maxlength(100) required
+    editBy String maxlength(100) required
+    editDate Instant required
+    createdBy String maxlength(100) required
+    createsDate Instant required
+}
+
+entity Bank {
+    id Long required
+    bankName String maxlength(100) required
+    bankAccount String maxlength(50) required
+    editBy String maxlength(100) required
+    editDate Instant required
+    createdBy String maxlength(100) required
+    createsDate Instant required
+}
+
+
+entity ClientConnect {
+    id Long required
+    name String  maxlength(100) required
+    type String  maxlength(100) required
+    identifier String  maxlength(100) required
+    located String  maxlength(100)
+    editBy String maxlength(100) required
+    editDate Instant required
+    createdBy String maxlength(100) required
+    createsDate Instant required
+}
+
+entity Transaction {
+    id Long required
+    inicialDate Instant
+    creadoDate Instant
+    enviadoDate Instant
+    errorDate Instant
+    pagadoDate Instant
+    status Status required
+    reference String required
+    amount BigDecimal required
+    type Boolean required
+    from String required
+    accountFrom String required
+    referenceFrom String
+    messageFrom String
+    paymentString String
+    editBy String maxlength(100) required
+    editDate Instant required
+    createdBy String maxlength(100) required
+    createsDate Instant required
+}
+
+enum Status {
+    INICIAL, CREADO, ENVIADO, ERROR, PAGADO
+}
+
+//relationship ManyToOne {
+//    Bank to AccountUser
+//    ClientConnect to AccountUser
+//    Transaction to AccountUser
+//    Transaction to ClientConnect
+//    AccountUser to Bank
+//}
+
+
+relationship OneToMany {
+    AccountUser{bank} to Bank{accountuser}
+    AccountUser{clientconnect} to ClientConnect{accountuser}
+    AccountUser{transaction} to Transaction{accountuser}
+    Bank{transaction} to Transaction{bank}
+    ClientConnect{transaction} to Transaction{clientconnect}
+}
+
+//paginate Transaction, ClientConnect, Bank with pagination
+//filter Transaction, ClientConnect, Bank
+
+dto all with mapstruct
+
+service all with serviceImpl
+
+//search * with elasticSearch
+//search Transaction, ClientConnect  with elasticSearch

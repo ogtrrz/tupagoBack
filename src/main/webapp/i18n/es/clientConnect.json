@@ -1,0 +1,33 @@
+{
+  "tupagoBackApp": {
+    "clientConnect": {
+      "home": {
+        "title": "Client Connects",
+        "refreshListLabel": "Refrescar lista",
+        "createLabel": "Crear nuevo Client Connect",
+        "createOrEditLabel": "Crear o editar Client Connect",
+        "notFound": "Ningún Client Connects encontrado"
+      },
+      "created": "Un nuevo Client Connect ha sido creado con el identificador {{ param }}",
+      "updated": "Un Client Connect ha sido actualizado con el identificador {{ param }}",
+      "deleted": "Un Client Connect ha sido eliminado con el identificador {{ param }}",
+      "delete": {
+        "question": "¿Seguro que quiere eliminar Client Connect {{ id }}?"
+      },
+      "detail": {
+        "title": "Client Connect"
+      },
+      "id": "Id",
+      "name": "Name",
+      "type": "Type",
+      "identifier": "Identifier",
+      "located": "Located",
+      "editBy": "Edit By",
+      "editDate": "Edit Date",
+      "createdBy": "Created By",
+      "createsDate": "Creates Date",
+      "transaction": "Transaction",
+      "accountuser": "Accountuser"
+    }
+  }
+}

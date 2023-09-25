@@ -1,0 +1,31 @@
+{
+  "tupagoBackApp": {
+    "bank": {
+      "home": {
+        "title": "Banks",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "创建新 Bank",
+        "createOrEditLabel": "创建或编辑 Bank",
+        "notFound": "No Banks found"
+      },
+      "created": "Bank {{ param }} 创建成功",
+      "updated": "Bank {{ param }} 更新成功",
+      "deleted": "Bank {{ param }} 删除成功",
+      "delete": {
+        "question": "你确定要删除 Bank {{ id }} 吗？"
+      },
+      "detail": {
+        "title": "Bank"
+      },
+      "id": "Id",
+      "bankName": "Bank Name",
+      "bankAccount": "Bank Account",
+      "editBy": "Edit By",
+      "editDate": "Edit Date",
+      "createdBy": "Created By",
+      "createsDate": "Creates Date",
+      "transaction": "Transaction",
+      "accountuser": "Accountuser"
+    }
+  }
+}

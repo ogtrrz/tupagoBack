@@ -1,0 +1,125 @@
+{
+  "applications": "*",
+  "changelogDate": "20230924191830",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "transaction",
+  "fields": [
+    {
+      "fieldName": "id",
+      "fieldType": "Long",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "inicialDate",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "creadoDate",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "enviadoDate",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "errorDate",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "pagadoDate",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "status",
+      "fieldType": "Status",
+      "fieldValidateRules": ["required"],
+      "fieldValues": "INICIAL,CREADO,ENVIADO,ERROR,PAGADO"
+    },
+    {
+      "fieldName": "reference",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "amount",
+      "fieldType": "BigDecimal",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "type",
+      "fieldType": "Boolean",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "from",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "accountFrom",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "referenceFrom",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "messageFrom",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "paymentString",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "editBy",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength", "required"],
+      "fieldValidateRulesMaxlength": "100"
+    },
+    {
+      "fieldName": "editDate",
+      "fieldType": "Instant",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "createdBy",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength", "required"],
+      "fieldValidateRulesMaxlength": "100"
+    },
+    {
+      "fieldName": "createsDate",
+      "fieldType": "Instant",
+      "fieldValidateRules": ["required"]
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Transaction",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "accountUser",
+      "otherEntityRelationshipName": "transaction",
+      "relationshipName": "accountuser",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "bank",
+      "otherEntityRelationshipName": "transaction",
+      "relationshipName": "bank",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "clientConnect",
+      "otherEntityRelationshipName": "transaction",
+      "relationshipName": "clientconnect",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "service": "serviceImpl"
+}

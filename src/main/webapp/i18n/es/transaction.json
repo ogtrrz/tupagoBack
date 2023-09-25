@@ -1,0 +1,44 @@
+{
+  "tupagoBackApp": {
+    "transaction": {
+      "home": {
+        "title": "Transactions",
+        "refreshListLabel": "Refrescar lista",
+        "createLabel": "Crear nuevo Transaction",
+        "createOrEditLabel": "Crear o editar Transaction",
+        "notFound": "Ningún Transactions encontrado"
+      },
+      "created": "Un nuevo Transaction ha sido creado con el identificador {{ param }}",
+      "updated": "Un Transaction ha sido actualizado con el identificador {{ param }}",
+      "deleted": "Un Transaction ha sido eliminado con el identificador {{ param }}",
+      "delete": {
+        "question": "¿Seguro que quiere eliminar Transaction {{ id }}?"
+      },
+      "detail": {
+        "title": "Transaction"
+      },
+      "id": "Id",
+      "inicialDate": "Inicial Date",
+      "creadoDate": "Creado Date",
+      "enviadoDate": "Enviado Date",
+      "errorDate": "Error Date",
+      "pagadoDate": "Pagado Date",
+      "status": "Status",
+      "reference": "Reference",
+      "amount": "Amount",
+      "type": "Type",
+      "from": "From",
+      "accountFrom": "Account From",
+      "referenceFrom": "Reference From",
+      "messageFrom": "Message From",
+      "paymentString": "Payment String",
+      "editBy": "Edit By",
+      "editDate": "Edit Date",
+      "createdBy": "Created By",
+      "createsDate": "Creates Date",
+      "accountuser": "Accountuser",
+      "bank": "Bank",
+      "clientconnect": "Clientconnect"
+    }
+  }
+}

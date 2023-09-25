@@ -1,0 +1,35 @@
+{
+  "tupagoBackApp": {
+    "accountUser": {
+      "home": {
+        "title": "Account Users",
+        "refreshListLabel": "Refrescar lista",
+        "createLabel": "Crear nuevo Account User",
+        "createOrEditLabel": "Crear o editar Account User",
+        "notFound": "Ningún Account Users encontrado"
+      },
+      "created": "Un nuevo Account User ha sido creado con el identificador {{ param }}",
+      "updated": "Un Account User ha sido actualizado con el identificador {{ param }}",
+      "deleted": "Un Account User ha sido eliminado con el identificador {{ param }}",
+      "delete": {
+        "question": "¿Seguro que quiere eliminar Account User {{ id }}?"
+      },
+      "detail": {
+        "title": "Account User"
+      },
+      "id": "Id",
+      "user": "User",
+      "userAccount": "User Account",
+      "inscription": "Inscription",
+      "userTelephone": "User Telephone",
+      "userName": "User Name",
+      "editBy": "Edit By",
+      "editDate": "Edit Date",
+      "createdBy": "Created By",
+      "createsDate": "Creates Date",
+      "bank": "Bank",
+      "clientconnect": "Clientconnect",
+      "transaction": "Transaction"
+    }
+  }
+}

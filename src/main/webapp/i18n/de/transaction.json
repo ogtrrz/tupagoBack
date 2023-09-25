@@ -1,0 +1,44 @@
+{
+  "tupagoBackApp": {
+    "transaction": {
+      "home": {
+        "title": "Transactions",
+        "refreshListLabel": "Liste aktualisieren",
+        "createLabel": "Transaction erstellen",
+        "createOrEditLabel": "Transaction erstellen oder bearbeiten",
+        "notFound": "Keine Transactions gefunden"
+      },
+      "created": "Transaction erstellt mit ID {{ param }}",
+      "updated": "Transaction aktualisiert mit ID {{ param }}",
+      "deleted": "Transaction gelöscht mit ID {{ param }}",
+      "delete": {
+        "question": "Soll Transaction {{ id }} wirklich dauerhaft gelöscht werden?"
+      },
+      "detail": {
+        "title": "Transaction"
+      },
+      "id": "Id",
+      "inicialDate": "Inicial Date",
+      "creadoDate": "Creado Date",
+      "enviadoDate": "Enviado Date",
+      "errorDate": "Error Date",
+      "pagadoDate": "Pagado Date",
+      "status": "Status",
+      "reference": "Reference",
+      "amount": "Amount",
+      "type": "Type",
+      "from": "From",
+      "accountFrom": "Account From",
+      "referenceFrom": "Reference From",
+      "messageFrom": "Message From",
+      "paymentString": "Payment String",
+      "editBy": "Edit By",
+      "editDate": "Edit Date",
+      "createdBy": "Created By",
+      "createsDate": "Creates Date",
+      "accountuser": "Accountuser",
+      "bank": "Bank",
+      "clientconnect": "Clientconnect"
+    }
+  }
+}

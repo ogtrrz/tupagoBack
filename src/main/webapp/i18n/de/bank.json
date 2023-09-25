@@ -1,0 +1,31 @@
+{
+  "tupagoBackApp": {
+    "bank": {
+      "home": {
+        "title": "Banks",
+        "refreshListLabel": "Liste aktualisieren",
+        "createLabel": "Bank erstellen",
+        "createOrEditLabel": "Bank erstellen oder bearbeiten",
+        "notFound": "Keine Banks gefunden"
+      },
+      "created": "Bank erstellt mit ID {{ param }}",
+      "updated": "Bank aktualisiert mit ID {{ param }}",
+      "deleted": "Bank gelöscht mit ID {{ param }}",
+      "delete": {
+        "question": "Soll Bank {{ id }} wirklich dauerhaft gelöscht werden?"
+      },
+      "detail": {
+        "title": "Bank"
+      },
+      "id": "Id",
+      "bankName": "Bank Name",
+      "bankAccount": "Bank Account",
+      "editBy": "Edit By",
+      "editDate": "Edit Date",
+      "createdBy": "Created By",
+      "createsDate": "Creates Date",
+      "transaction": "Transaction",
+      "accountuser": "Accountuser"
+    }
+  }
+}

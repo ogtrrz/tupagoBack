@@ -1,0 +1,35 @@
+{
+  "tupagoBackApp": {
+    "accountUser": {
+      "home": {
+        "title": "Account Users",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "创建新 Account User",
+        "createOrEditLabel": "创建或编辑 Account User",
+        "notFound": "No Account Users found"
+      },
+      "created": "Account User {{ param }} 创建成功",
+      "updated": "Account User {{ param }} 更新成功",
+      "deleted": "Account User {{ param }} 删除成功",
+      "delete": {
+        "question": "你确定要删除 Account User {{ id }} 吗？"
+      },
+      "detail": {
+        "title": "Account User"
+      },
+      "id": "Id",
+      "user": "User",
+      "userAccount": "User Account",
+      "inscription": "Inscription",
+      "userTelephone": "User Telephone",
+      "userName": "User Name",
+      "editBy": "Edit By",
+      "editDate": "Edit Date",
+      "createdBy": "Created By",
+      "createsDate": "Creates Date",
+      "bank": "Bank",
+      "clientconnect": "Clientconnect",
+      "transaction": "Transaction"
+    }
+  }
+}
