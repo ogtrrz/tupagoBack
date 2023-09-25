@@ -3,8 +3,8 @@ version: '3.8'
 services:
   tupagoback-postgresql:
     image: postgres:14.5
-    # volumes:
-    #   - ~/volumes/jhipster/tupagoBack/postgresql/:/var/lib/postgresql/data/
+    volumes:
+      - ~/volumes/jhipster/tupagoBack/postgresql/:/var/lib/postgresql/data/
     environment:
       - POSTGRES_USER=tupagoBack
       - POSTGRES_PASSWORD=

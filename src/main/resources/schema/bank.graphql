@@ -1,0 +1,22 @@
+type Bank {
+    text: String!
+    randomNumber: Int
+
+    id: Int!
+    bankName: String!
+    bankAccount: String!
+    editBy: String!
+    editDate: String!
+    createdBy: String!
+    createsDate: String!
+
+}
+
+type Query {
+    allBanks: [Bank]
+    oneBank: Bank
+}
+
+schema {
+    query: Query
+}

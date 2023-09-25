@@ -81,6 +81,15 @@ public class CacheConfiguration {
             createCache(cm, tupago.back.domain.User.class.getName(), jcacheConfiguration);
             createCache(cm, tupago.back.domain.Authority.class.getName(), jcacheConfiguration);
             createCache(cm, tupago.back.domain.User.class.getName() + ".authorities", jcacheConfiguration);
+            createCache(cm, tupago.back.domain.AccountUser.class.getName(), jcacheConfiguration);
+            createCache(cm, tupago.back.domain.AccountUser.class.getName() + ".banks", jcacheConfiguration);
+            createCache(cm, tupago.back.domain.AccountUser.class.getName() + ".clientconnects", jcacheConfiguration);
+            createCache(cm, tupago.back.domain.AccountUser.class.getName() + ".transactions", jcacheConfiguration);
+            createCache(cm, tupago.back.domain.Bank.class.getName(), jcacheConfiguration);
+            createCache(cm, tupago.back.domain.Bank.class.getName() + ".transactions", jcacheConfiguration);
+            createCache(cm, tupago.back.domain.ClientConnect.class.getName(), jcacheConfiguration);
+            createCache(cm, tupago.back.domain.ClientConnect.class.getName() + ".transactions", jcacheConfiguration);
+            createCache(cm, tupago.back.domain.Transaction.class.getName(), jcacheConfiguration);
             // jhipster-needle-redis-add-entry
         };
     }
