@@ -1,7 +1,4 @@
 type Bank {
-    text: String!
-    randomNumber: Int
-
     id: Int!
     bankName: String!
     bankAccount: String!
@@ -9,12 +6,11 @@ type Bank {
     editDate: String!
     createdBy: String!
     createsDate: String!
-
 }
 
 type Query {
     allBanks: [Bank]
-    oneBank: Bank
+    oneBank(id: ID): Bank
 }
 
 schema {
