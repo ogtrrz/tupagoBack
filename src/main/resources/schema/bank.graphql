@@ -7,12 +7,3 @@ type Bank {
     createdBy: String!
     createsDate: String!
 }
-
-type Query {
-    allBanks: [Bank]
-    oneBank(id: ID): Bank
-}
-
-schema {
-    query: Query
-}
