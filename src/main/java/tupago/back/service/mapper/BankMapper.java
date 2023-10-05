@@ -15,7 +15,7 @@ public interface BankMapper extends EntityMapper<BankDTO, Bank> {
     BankDTO toDto(Bank s);
 
     @Named("accountUserId")
-    @BeanMapping(ignoreByDefault = true)
+    @BeanMapping(ignoreByDefault = false)
     @Mapping(target = "id", source = "id")
     AccountUserDTO toDtoAccountUserId(AccountUser accountUser);
 }

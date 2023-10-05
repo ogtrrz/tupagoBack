@@ -9,4 +9,4 @@ import tupago.back.domain.Bank;
  */
 @SuppressWarnings("unused")
 @Repository
-public interface BankRepository extends JpaRepository<Bank, Long> {}
+public interface BankRepository extends JpaRepository<Bank, Long>, JpaSpecificationExecutor<Bank> {}

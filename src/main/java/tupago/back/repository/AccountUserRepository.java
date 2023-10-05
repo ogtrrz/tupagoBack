@@ -9,4 +9,4 @@ import tupago.back.domain.AccountUser;
  */
 @SuppressWarnings("unused")
 @Repository
-public interface AccountUserRepository extends JpaRepository<AccountUser, Long> {}
+public interface AccountUserRepository extends JpaRepository<AccountUser, Long>, JpaSpecificationExecutor<AccountUser> {}

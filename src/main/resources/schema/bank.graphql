@@ -1,9 +1,41 @@
+
+
 type Bank {
-    id: Int!
+    id: ID!
     bankName: String!
     bankAccount: String!
     editBy: String!
     editDate: String!
     createdBy: String!
     createsDate: String!
+    accountuser: AccountUser
+}
+
+input BankFilter {
+    id: Int
+    bankName: String
+    bankAccount: String
+    editBy: String
+    editDate: String
+    createdBy: String
+    createsDate: String
+    accountuser: AccountUserFilter
+}
+
+input AccountUserFilter {
+    id: Int
+#    user: String
+#    userAccount: String
+#    inscription: String
+#    userTelephone: String
+#    userName: String
+#    editBy: String
+#    editDate: String
+#    createdBy: String
+#    createsDate: String
+}
+
+input BankInput {
+    bankName: String!
+    bankAccount: String!
 }

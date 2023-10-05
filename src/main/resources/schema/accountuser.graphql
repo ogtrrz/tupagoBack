@@ -1,0 +1,12 @@
+type AccountUser {
+    id: Int!
+    user: String
+    userAccount: String
+    inscription: String
+    userTelephone: String
+    userName: String
+    editBy: String
+    editDate: String
+    createdBy: String
+    createsDate: String
+}

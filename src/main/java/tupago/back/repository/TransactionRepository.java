@@ -2,6 +2,7 @@ package tupago.back.repository;
 
 import org.springframework.data.jpa.repository.*;
 import org.springframework.stereotype.Repository;
+import tupago.back.domain.AccountUser;
 import tupago.back.domain.Transaction;
 
 /**
@@ -9,4 +10,4 @@ import tupago.back.domain.Transaction;
  */
 @SuppressWarnings("unused")
 @Repository
-public interface TransactionRepository extends JpaRepository<Transaction, Long> {}
+public interface TransactionRepository extends JpaRepository<Transaction, Long>, JpaSpecificationExecutor<Transaction> {}
