@@ -9,6 +9,8 @@ import javax.persistence.*;
 import javax.validation.constraints.*;
 import org.hibernate.annotations.Cache;
 import org.hibernate.annotations.CacheConcurrencyStrategy;
+import org.hibernate.annotations.CreationTimestamp;
+import org.springframework.data.annotation.CreatedBy;
 
 /**
  * A Bank.
@@ -50,10 +52,12 @@ public class Bank implements Serializable {
     @NotNull
     @Size(max = 100)
     @Column(name = "created_by", length = 100, nullable = false)
+//    @CreatedBy
     private String createdBy;
 
     @NotNull
     @Column(name = "creates_date", nullable = false)
+//    @CreationTimestamp
     private Instant createsDate;
 
     @OneToMany(mappedBy = "bank")

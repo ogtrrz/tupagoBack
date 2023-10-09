@@ -48,7 +48,7 @@ public class BankMutation {
     @DgsData(parentType = DgsConstants.MUTATION.TYPE_NAME, field = DgsConstants.MUTATION.DeleteBank)
     //    @DgsMutation
     public boolean deleteBank(String id) {
-        log.debug("GRAPHQL request to DELTE Bank : {}", id);
+        log.debug("GRAPHQL request to DELETE Bank : {}", id);
         BankCriteria criteria = new BankCriteria();
         criteria.bankAccount().setEquals(id);
         List<BankDTO> bankList = bankQueryService.findByCriteria(criteria);
@@ -94,7 +94,7 @@ public class BankMutation {
         if (!bankList.isEmpty()) {
             String userLogin = SecurityUtils.getCurrentUserLogin().orElse("Anonimo");
             Instant lt = Instant.now();
-            BankDTO bankDTO = bankList.get(0);
+            BankDTO bankDTO = bankList.stream().findFirst().orElseThrow();
             bankDTO.setBankName(bankInput.getBankName());
             //            bankDTO.setBankAccount(bankInput.getBankAccount());
             bankDTO.setEditDate(lt);

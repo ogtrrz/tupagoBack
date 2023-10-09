@@ -86,3 +86,56 @@ service all with serviceImpl
 
 //search * with elasticSearch
 //search Transaction, ClientConnect  with elasticSearch
+
+
+
+
+/*
+Banxico JDL
+
+
+entity Alta {
+	claveInstitucion Integer required
+    numeroSerie String required minlength(20) maxlength(20)
+    numeroSerieBM String required minlength(20) maxlength(20)
+    claveSim String required maxlength(690)
+    cadenaOriginal String
+    estampaTiempo Long
+    selloDigital String maxlength(1000)
+}
+
+// excluir de los datos que forman la cadena original ~ y el | regex=[^~|]
+
+entity Alias {
+	tipoDeAlias int required
+    alias Long max(9999999999) min(1000000000)
+}
+
+/*
+enum TipoAlias {
+	Celular
+}
+*/
+
+entity Peticion {
+    folioPet UUID
+    edoPet Integer required minlength(0) //seccion7.2.4 EstadoPeticion
+    numeroSerieBM String required minlength(20) maxlength(20)
+    cadenaOriginal String required minlength(2) //seccion 7.2.1 se pone ND a menos que edoPet = 0
+    estampaTiempo Long
+    selloDigital //seccion 7.2.2
+}
+
+/*
+enum EstadoPeticion {
+
+}
+*/
+
+entity InfoCuentaConsulta {
+    nombreEnmascarado String maxlength(40)
+}
+
+
+
+*/

@@ -1,0 +1,61 @@
+
+entity Alta {
+    claveInstitucion Integer required
+    numeroSerie String required minlength(20) maxlength(20)
+    numeroSerieBM String required minlength(20) maxlength(20)
+    claveSim String required maxlength(690)
+    cadenaOriginal String
+    estampaTiempo Long
+    selloDigital String maxlength(1000)
+}
+
+// excluir de los datos que forman la cadena original ~ y el | regex=[^~|]
+
+entity Alias {
+    tipoDeAlias Integer required
+    alias Long max(9999999999) min(1000000000)
+}
+
+/*
+enum TipoAlias {
+	Celular
+}
+*/
+
+entity Peticion {
+    folioPet UUID
+    edoPet Integer required min(0) //seccion7.2.4 EstadoPeticion
+    numeroSerieBM String required minlength(20) maxlength(20)
+    cadenaOriginal String required minlength(2) //seccion 7.2.1 se pone ND a menos que edoPet = 0
+    estampaTiempo Long //no poner requiered para que lo genere Spring? o solo es para la db??
+    selloDigital String maxlength(1000) //seccion 7.2.2
+    //resultado Integer max(0) //tiene id negativos para error del -1 maximo -99 pero no es corrido este debe ser el edoPet?
+}
+
+/*
+enum EstadoPeticion {
+
+}
+*/
+
+entity InfoCuentaConsulta { //j*** p****|0|012345678900000000|X00XX
+    nombreEnmascarado String required maxlength(40) //Juan Perez = j*** p**** sin doble espacio regex = ^((?!\s{2}).)*$
+    tipoCuenta Integer required minlength(0) maxlength(9) //0 - CLABE solo existe una
+    cunetaDelCliente String required minlength(18) maxlength(18) //CLABE -18 digitos empieza 0?
+    claveSpei String required minlength(5) maxlength(5)
+}
+
+entity SelloPeticion { //selloDigital|0
+    cadenaSello String required maxlength(998) //cadenaOriginal+estampaTiempo
+    tipoFirmado Integer required min(0) max(1) //0-SHA256withRSAandMGF1 1- SHA512withRSAandMGF1
+}
+/*
+enum TipoFirmado {
+    SHA256withRSAandMGF1
+    SHA512withRSAandMGF1
+}
+*/
+
+
+
+
